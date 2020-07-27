@@ -5,6 +5,9 @@ import java.util.concurrent.TimeUnit;
 
 import javax.swing.JFrame;
 
+import button.ButtonOk;
+import watcher.Watcher;
+
 public class GameImplementationModel extends Watcher {
 	
 	private GameImplementation gi;
@@ -38,6 +41,7 @@ public class GameImplementationModel extends Watcher {
 		spelling(itsTurn);
 	}
 
+	@SuppressWarnings("static-access")
 	public void spelling(String msg) {
 		
 		if (signIn == gi.CROSSWISE && !isCrossTurn()) {
@@ -70,6 +74,7 @@ public class GameImplementationModel extends Watcher {
 		return gi.isCross();
 	}
 	
+	@SuppressWarnings("static-access")
 	public void checkWinner() {
 		
 				if (whoDidWin() != gi.EMPTY) {
@@ -164,7 +169,7 @@ public class GameImplementationModel extends Watcher {
 	private void draw() {
 		
 		JFrame frame = new JFrame("Game");
-		OkComponent ok = new OkComponent(("This game ended in a draw!"), frame);
+		ButtonOk ok = new ButtonOk(("This game ended in a draw!"), frame);
 
 		frame.setSize(400, 200);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);

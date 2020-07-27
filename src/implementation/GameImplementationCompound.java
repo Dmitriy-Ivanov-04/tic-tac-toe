@@ -4,6 +4,8 @@ import java.awt.BorderLayout;
 
 import javax.swing.JPanel;
 
+import form.BoardForm;
+
 public class GameImplementationCompound extends JPanel {
 	
 	private static final long serialVersionUID = -4292001101477202865L;
@@ -12,13 +14,13 @@ public class GameImplementationCompound extends JPanel {
 		
 		super();
 		
-		BoardForm board = new BoardForm(model);
+		BoardForm boardView = new BoardForm(model);
 
-		model.addWatcher(board);
+		model.addWatcher(boardView);
 		
 		setLayout(new BorderLayout());
 		
-		add(board, BorderLayout.CENTER);
+		add(boardView, BorderLayout.CENTER);
 
 	}
 
