@@ -168,7 +168,7 @@ public class GameImplementationModel extends Watcher {
 
 	private void draw() {
 		
-		JFrame frame = new JFrame("Game");
+		JFrame frame = new JFrame("Tic Tac Toe");
 		ButtonOk ok = new ButtonOk(("This game ended in a draw!"), frame);
 
 		frame.setSize(400, 200);

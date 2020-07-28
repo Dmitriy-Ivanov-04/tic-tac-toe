@@ -21,18 +21,18 @@ public class ButtonsForm extends JPanel {
 		this.serverPrint = serverPrint;
 		this.tableForm = tableForm;
 
-		JButton refresh = new JButton("Update");
-		refresh.addActionListener(e -> printUpdate());
+		JButton update = new JButton("Update");
+		update.addActionListener(e -> printUpdate());
 
-		JButton exit = new JButton("Quit");
-		exit.addActionListener(e -> printQuit());
+		JButton quit = new JButton("Quit");
+		quit.addActionListener(e -> printQuit());
 
-		JButton request = new JButton("To invite");
-		request.addActionListener(e -> printInvite());
+		JButton invite = new JButton("To invite");
+		invite.addActionListener(e -> printInvite());
 
-		add(request);
-		add(refresh);
-		add(exit);
+		add(invite);
+		add(update);
+		add(quit);
 
 	}
 	
