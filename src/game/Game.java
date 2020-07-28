@@ -69,7 +69,6 @@ public class Game {
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.add(compound);
 		frame.setVisible(true);
-
 	}
 
 	public void step(int step) {
@@ -77,7 +76,6 @@ public class Game {
 		int i = step / 10;
 		int j = step % 10;
 		gIModel.turn(i, j);
-
 	}
 
 }
