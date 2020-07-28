@@ -6,6 +6,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import gui.GameGUI;
+
 public class ButtonOk extends JPanel {
 	
 	private static final long serialVersionUID = 5413846271781170024L;
@@ -19,15 +21,12 @@ public class ButtonOk extends JPanel {
 		this.frame = frame;
 		
 		JButton okay = new JButton("Ok");
-		okay.addActionListener(e -> clickButtonOk());
+		okay.addActionListener(e -> frame.dispose());
 		
 		add(okay);		
 		setLayout(new BorderLayout());
 		add(label, BorderLayout.CENTER);
 		add(okay, BorderLayout.SOUTH);
 	}
-	
-	private void clickButtonOk() {
-		frame.dispose();
-	}
+
 }
