@@ -7,7 +7,7 @@ public class ReportTurn {
 
 	private BlockingQueue<Report> queue = new LinkedBlockingQueue<Report>();
 
-	Report accept() {
+	public Report accept() {
 
 		while (true) {
 			
